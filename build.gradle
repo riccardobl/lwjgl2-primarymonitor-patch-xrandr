@@ -1,0 +1,24 @@
+
+apply plugin: 'java'
+
+
+targetCompatibility = '1.6'
+sourceCompatibility = '1.6'
+
+
+
+
+jar {
+	manifest {
+        attributes "Premain-Class":"lwjgl2.PrimaryScreenPatch"
+    }
+}
+			
+repositories {
+    mavenLocal()
+    mavenCentral();
+}	
+
+dependencies {
+	compile "org.javassist:javassist:3.19.0-GA"
+} 
